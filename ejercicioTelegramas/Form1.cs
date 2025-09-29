@@ -10,7 +10,7 @@ namespace ejercicioTelegramas
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
             double coste;
 
@@ -30,14 +30,14 @@ namespace ejercicioTelegramas
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 2.5;
+                    coste = 3;
                 else
                     coste = 2.5 + 0.50 * (numPalabras - 10);
             else
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
-                    coste = 5;
+                    coste = 6;
                 else
                     coste = 5 + 0.75 * (numPalabras - 10);
             else
