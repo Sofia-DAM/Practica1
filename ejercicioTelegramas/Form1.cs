@@ -10,15 +10,21 @@ namespace ejercicioTelegramas
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = 'o';
+            char tipoTelegrama = ' ';
             int numPalabras = 0;
             double coste;
 
             //Leo el telegrama 
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (rbUrgente.Checked)
+            {
                 tipoTelegrama = 'u';
+            }
+            else if (rbOrdinario.Checked)
+            {
+                tipoTelegrama = 'o';
+            }
             //Obtengo el número de palabras que forma el telegrama numPalabras = textoTelegrama.Length;
             numPalabras = textoTelegrama.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
             //Si el telegrama es ordinario
@@ -38,6 +44,8 @@ namespace ejercicioTelegramas
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
         }
+
+        
     }
 }
 
