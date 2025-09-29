@@ -89,6 +89,7 @@
             // rbOrdinario
             // 
             rbOrdinario.AutoSize = true;
+            rbOrdinario.Checked = true;
             rbOrdinario.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             rbOrdinario.Location = new Point(62, 413);
             rbOrdinario.Name = "rbOrdinario";
@@ -106,7 +107,6 @@
             rbUrgente.Name = "rbUrgente";
             rbUrgente.Size = new Size(87, 24);
             rbUrgente.TabIndex = 6;
-            rbUrgente.TabStop = true;
             rbUrgente.Text = "Urgente";
             rbUrgente.UseVisualStyleBackColor = true;
             // 
