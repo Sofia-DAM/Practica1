@@ -10,7 +10,7 @@ namespace ejercicioTelegramas
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o';
             int numPalabras = 0;
             double coste;
 
@@ -20,12 +20,13 @@ namespace ejercicioTelegramas
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
             //Obtengo el número de palabras que forma el telegrama numPalabras = textoTelegrama.Length;
+            numPalabras = textoTelegrama.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries).Length;
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
-                    coste = 0.5 * numPalabras;
+                    coste = 2.5 + 0.50 * (numPalabras - 10);
             else
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
